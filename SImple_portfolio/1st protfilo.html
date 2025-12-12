@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+   <link rel="stylesheet" href="1 protfilo.css">
+</head>
+<body>
+    <header>
+        <h2>ahmad<span>.is.</span>coding</h2>
+  
+    <nav>
+        <ul class="navbar">
+            <li><a href=""><i class="fa-solid fa-house-user"></i> HOME</a></li>
+            <li><a href=""><i class="fa-brands fa-medium"></i> ABOUT</a></li>
+            <li><a href=""><i class="fa-brands fa-internet-explorer"></i> BLOG</a></li>
+            <li><a href=""><i class="fa-solid fa-file"></i> SERVICES</a></li>
+            <li><a href=""><i class="fa-regular fa-images"></i> GALLERY</a></li>
+            <li><a href=""><i class="fa-solid fa-sliders"></i>PROJECTS</a></li>
+            <li><a href=""><i class="fa-solid fa-address-card"></i> CONTACT</a></li>
+        </ul>
+    </nav>
+      </header>
+      <div class="content">
+      <h1>I am Ahmad</h1>
+      <div class="logo"> <h2>Web Developer</h2></div>
+      <p>I am a motivated and curious individual with a strong interest in technology<br> and continuous learning. I enjoy exploring new ideas, solving problems,<br> and building my skills in areas like web development and creative projects.<br>My goal is to grow personally and professionally while contributing positively wherever <span class="color">I work or study.</span> </p>
+  <div id="a">
+      <div class="button"> <a href="">Here me</a></div>
+   <div class="arrow"> <a href="">About me</a></div>
+   </div>
+    </div>
+    <footer>
+       
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.getElementById('navbar');
+        
+        menuToggle.addEventListener('click', function() {
+            navbar.classList.toggle('active');
+            
+            // Change menu icon
+            const icon = menuToggle.querySelector('i');
+            if (navbar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.navbar a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navbar.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    });
+</script>
+</body>
+</html>
